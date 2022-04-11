@@ -11,7 +11,7 @@ const menu = () =>{
                 <NavLink to='/About Us'>About Us</NavLink>
             </div>
             <div className={"href"}>
-                <NavLink to='/Coments'>Coments</NavLink>
+                <NavLink to='/Comments'>Comments</NavLink>
             </div>
             <div className={"href"}>
                 <NavLink to='/Contact'>Contact</NavLink>
