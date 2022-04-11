@@ -1,25 +1,35 @@
-import logo from './logo.svg';
+import React from "react";
 import './App.css';
-
-function App() {
+import Panel from "./librari/Panel";
+import Menu from './librari/Menu'
+import {BrowserRouter, Route} from "react-router-dom"
+import Content from "./librari/Content";
+import Coment from "./librari/Coment";
+const App = ()=> {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <BrowserRouter>
+          <div className={'app-wraper'}>
+              <div id="root"></div>
+            <div className="App">
+                <div>
+                  <header>
+                    <img src={"https://pbs.twimg.com/profile_banners/837257302314987520/1488453652/1500x500"} alt={"cartinka"}/>
+                  </header>
+                </div>
+            </div>
+              <div>
+                  <Panel/>
+                  <Menu/>
+                  <div className={'app-wraper-content'}>
+                      <Route exact path='/' component={Content}/>
+                      <Route path='/Coments' component={Coment}/>
+                      <Route path='/Home' component={Content}/>
+                  </div>
+              </div>
+          </div>
+      </BrowserRouter>
   );
 }
-
 export default App;
+//
+//
