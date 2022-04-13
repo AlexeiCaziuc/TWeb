@@ -7,13 +7,6 @@ const Comments = () => {
     console.log(posts);
 
     return (
-        // <div className={"Content1"}>
-        //     <p>Имя: {props.name}</p>
-        //     <p>Емаил: {props.email}</p>
-        //     <p>{props.message}</p>
-        // </div>
-
-
         posts.map((post, index) => {
             return (
                 <div className={"Content1"} key={index}>
