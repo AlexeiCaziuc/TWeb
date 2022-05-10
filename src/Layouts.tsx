@@ -2,6 +2,7 @@ import { Layout, Menu, Breadcrumb, Card } from 'antd';
 import { CustomForm } from './components/CustomForm';
 import { IUser } from './components/interfaces';
 import {BrowserRouter} from "react-router-dom";
+import {AuthFrom} from "./components/AuthForm";
 
 const { Header, Content, Footer} = Layout;
 
@@ -46,7 +47,7 @@ export const MainLayout = () => {
                 <Breadcrumb.Item>App</Breadcrumb.Item>
             </Breadcrumb>
             <Card bordered={false}>
-                <CustomForm />
+                <AuthFrom />
             </Card>
         </Content>
     );
