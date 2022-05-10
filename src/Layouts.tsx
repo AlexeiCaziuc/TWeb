@@ -5,7 +5,7 @@ import {BrowserRouter} from "react-router-dom";
 
 const { Header, Content, Footer} = Layout;
 
-const tabs: Array<String> = ['First', 'Second', 'Third', 'Secret'];
+const tabs: Array<String> = ['Home', 'List', 'App', 'About'];
 
 export const HeaderLayout = () => {
     return (
