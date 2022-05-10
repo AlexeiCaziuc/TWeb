@@ -1,10 +1,10 @@
-import { Form, Input, Select, Checkbox, Button } from 'antd';
+import { Form, Input, Select, Button } from 'antd';
 import { useState } from 'react';
 import './CustomForm.css';
-
+import { observer } from 'mobx-react';
 const { Option } = Select;
 
-export function CustomForm() {
+export const CustomForm = observer(() => {
     const [nick, setNick] = useState('');
     const [phone, setPhone] = useState('');
     const [gender, setGender] = useState('');
@@ -111,4 +111,4 @@ export function CustomForm() {
             </Form.Item>
         </Form>
     );
-}
+});

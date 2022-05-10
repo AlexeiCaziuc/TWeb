@@ -53,7 +53,7 @@ export const MainLayout = () => {
 };
 export const UsersLayout = () => {
 
-    var p = <><p>{user.nickname}</p>
+    let p = <><p>{user.nickname}</p>
         <p>{user.email}</p>
         <p>{user.phone}</p>
         <p>{user.comment}</p>

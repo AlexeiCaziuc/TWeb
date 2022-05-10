@@ -3,7 +3,6 @@ import Card from 'antd/lib/card';
 import { observer } from 'mobx-react';
 import { useEffect } from 'react';
 import { IContentModel } from './interfaces';
-import React from 'react'
 
 export const CustomCards = observer(
     ({ content }: { content: IContentModel }) => {

@@ -1,7 +1,7 @@
 import { notification } from 'antd'
 import axios from 'axios'
 import { flow } from 'mobx'
-// import { v4 as uuid4 } from 'uuid';
+// import { v4 as uuidv4 } from 'uuid';
 import { types } from 'mobx-state-tree';
 import { ContentModel } from '../models/Content.model';
 
@@ -38,7 +38,7 @@ const RootStore = types
         makeSnapshotContents(sn: any) {
             self.contents = sn.map((item: any) => {
                 return {
-                    //   id: uuid4(),
+                    //   id: uuidv4(),
                     title: item.API,
                     description: item.Description,
                     link: item.Link,
@@ -47,7 +47,7 @@ const RootStore = types
             });
         },
     }))
-    .actions((self: { makeSnapshotContents: (arg0: any) => void; contents: any; }) => ({
+    .actions((self:any) => ({
         fetchContents: flow(function* () {
             try {
                 const res = yield axios.get('https://api.publicapis.org/entries');

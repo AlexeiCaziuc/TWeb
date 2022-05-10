@@ -11,7 +11,7 @@ export const ContentModel = types
         addToList: false,
         notes: '',
     })
-    .views((self:any) => ({
+    .views((self: { seen: any; title: string | any[]; }) => ({
         get isSeen() {
             return self.seen;
         },
@@ -20,7 +20,7 @@ export const ContentModel = types
             self.title.includes(param);
         },
     }))
-    .actions((self:any) => ({
+    .actions((self: { notes: string; seen: boolean; }) => ({
         changeNotes(value: string) {
             self.notes = value;
         },
