@@ -5,13 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="111e16d0-3610-4b97-b3a7-06dc59e1c1bc" name="Changes" comment="a">
-      <change afterPath="$PROJECT_DIR$/src/components/CustomCard.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Layouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/models/Content.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/models/Content.model.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/RootStore.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/RootStore.store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/store/StoreProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/StoreProvider.ts" afterDir="false" />
@@ -42,6 +36,7 @@
     </file-type-list>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/models/Content.model.ts" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/index.tsx" root0="SKIP_INSPECTION" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -110,6 +105,7 @@
       <workItem from="1652063987336" duration="2795000" />
       <workItem from="1652135272280" duration="6187000" />
       <workItem from="1652151644467" duration="5253000" />
+      <workItem from="1652157168253" duration="1152000" />
     </task>
     <servers />
   </component>

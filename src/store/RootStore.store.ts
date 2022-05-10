@@ -1,15 +1,15 @@
 import { notification } from 'antd'
 import axios from 'axios'
 import { flow } from 'mobx'
-// import { v4 as uuidv4 } from 'uuid';
+// import { v4 as uuid4 } from 'uuid';
 import { types } from 'mobx-state-tree';
 import { ContentModel } from '../models/Content.model';
-import StoreProvider from './StoreProvider';
+
 export const FormCustom = types.model('FormCustom', {
     name: '',
     age: 0,
     intro: ''
-}).actions((self) => ({
+}).actions((self:any) => ({
     setName(name: string): void {
         self.name = name
     },
@@ -23,7 +23,7 @@ export const FormCustom = types.model('FormCustom', {
         console.log('>>self', self)
     }
 
-})).views((self) => ({
+})).views((self:any) => ({
     get getAge() {
         return String(self.age)
     }
@@ -34,11 +34,11 @@ const RootStore = types
         contents: types.array(ContentModel),
         forms_custom: FormCustom,
     })
-    .actions((self) => ({
+    .actions((self:any) => ({
         makeSnapshotContents(sn: any) {
             self.contents = sn.map((item: any) => {
                 return {
-                    //   id: uuidv4(),
+                    //   id: uuid4(),
                     title: item.API,
                     description: item.Description,
                     link: item.Link,
@@ -47,7 +47,7 @@ const RootStore = types
             });
         },
     }))
-    .actions((self) => ({
+    .actions((self: { makeSnapshotContents: (arg0: any) => void; contents: any; }) => ({
         fetchContents: flow(function* () {
             try {
                 const res = yield axios.get('https://api.publicapis.org/entries');

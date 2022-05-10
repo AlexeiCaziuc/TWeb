@@ -30,7 +30,7 @@ const storeProvider = RootStore.create({
             title: 'Privet 4',
             description: 'Some more text',
             seen: true,
-            notes: 'First',
+            notes: 'List',
 
         },
     ],
