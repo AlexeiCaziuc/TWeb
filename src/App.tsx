@@ -1,19 +1,32 @@
-import React from 'react';
-import { Layout } from 'antd';
-import {HeaderLayout, MainLayout, FooterLayout, UsersLayout} from './Layouts';
-import './App.css';
+import React, { useEffect } from 'react'
+import { DndProvider } from 'react-dnd'
+import { HTML5Backend } from 'react-dnd-html5-backend'
+import { useRootStore } from './index'
+import './App.css'
+
+import { Layout } from 'antd'
+import {FooterLayout, HeaderLayout} from './Layouts'
+import { ContentLayout } from './Layouts'
 
 function App() {
+
+    const { fetchContents } = useRootStore()
+
+    useEffect(() => {
+        fetchContents()
+    }, [])
+
     return (
         <>
-            <Layout className="layout">
+            <Layout className='layout'>
                 <HeaderLayout />
-                <MainLayout />
-                <FooterLayout />
-                <UsersLayout />
+                <DndProvider backend={ HTML5Backend }>
+                    <ContentLayout />
+                </DndProvider>
             </Layout>
+            <FooterLayout/>
         </>
-    );
+    )
 }
 
-export default App;
+export default App
