@@ -5,13 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="111e16d0-3610-4b97-b3a7-06dc59e1c1bc" name="Changes" comment="aaaaaaaaaaaa">
-      <change afterPath="$PROJECT_DIR$/src/components/AuthForm.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/AuthContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/authHook.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hooks/httpHook.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Routes/Rourtes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Articles/Articles.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Layouts.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/Layouts.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/CustomCard.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/CustomCard.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/RootStore.store.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/RootStore.store.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/StoreProvider.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/StoreProvider.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +66,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="javascript.nodejs.core.library.configured.version" value="16.14.0" />
-    <property name="javascript.nodejs.core.library.typings.version" value="16.11.33" />
+    <property name="javascript.nodejs.core.library.typings.version" value="16.11.34" />
     <property name="js.last.introduce.type" value="VAR" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -109,7 +113,8 @@
       <workItem from="1652135272280" duration="6187000" />
       <workItem from="1652151644467" duration="5253000" />
       <workItem from="1652157168253" duration="1837000" />
-      <workItem from="1652212354955" duration="2654000" />
+      <workItem from="1652212354955" duration="3272000" />
+      <workItem from="1652272477682" duration="6643000" />
     </task>
     <task id="LOCAL-00001" summary="aaaaaaaaaaaa">
       <created>1652214414868</created>

@@ -1,15 +1,16 @@
 import { notification } from 'antd'
 import axios from 'axios'
+import update from 'immutability-helper'
 import { flow } from 'mobx'
-// import { v4 as uuidv4 } from 'uuid';
-import { types } from 'mobx-state-tree';
-import { ContentModel } from '../models/Content.model';
+import { types } from 'mobx-state-tree'
+import { ContentModel } from '../models/Content.model'
+
 
 export const FormCustom = types.model('FormCustom', {
     name: '',
     age: 0,
     intro: ''
-}).actions((self:any) => ({
+}).actions((self) => ({
     setName(name: string): void {
         self.name = name
     },
@@ -23,42 +24,69 @@ export const FormCustom = types.model('FormCustom', {
         console.log('>>self', self)
     }
 
-})).views((self:any) => ({
+})).views((self) => ({
     get getAge() {
         return String(self.age)
     }
+
 }))
 
-const RootStore = types
-    .model('RootStore', {
-        contents: types.array(ContentModel),
-        forms_custom: FormCustom,
-    })
-    .actions((self:any) => ({
+const RootStore = types.model('RootStore', {
+    contents: types.array(ContentModel),
+    forms_custom: FormCustom
+})
+    .views((self) => ({
+        findContent(id: string) {
+            const content = self.contents.filter((c: any) => c.id === id)[0]
+            return {
+                content,
+                index: self.contents.indexOf(content)
+            }
+        }
+    }))
+    .actions((self) => ({
+
+        changeContentPosition(id: string, atIndex: number) {
+            const { content, index } = self.findContent(id)
+
+            self.contents = update(self.contents, {
+                $splice: [
+                    [ index, 1 ],
+                    [ atIndex, 0, content ]
+                ]
+            })
+
+        },
+
         makeSnapshotContents(sn: any) {
-            self.contents = sn.map((item: any) => {
+
+            self.contents = sn.slice(0, 30).map((item: any, index: number) => {
                 return {
-                    //   id: uuidv4(),
+                    id: String(index),
                     title: item.API,
                     description: item.Description,
                     link: item.Link,
-                    category: item.Category,
-                };
-            });
-        },
+                    category: item.Category
+                }
+            })
+
+        }
     }))
-    .actions((self:any) => ({
+    .actions((self) => ({
         fetchContents: flow(function* () {
             try {
-                const res = yield axios.get('https://api.publicapis.org/entries');
-                self.makeSnapshotContents(res.data.entries);
-
-                console.log('>>contents', self.contents);
+                const res = yield axios.get('https://api.publicapis.org/entries')
+                self.makeSnapshotContents(res.data.entries)
             } catch (e: any) {
-                console.log('error', e);
-                notification.error({ message: e.message });
+                console.log('error', e)
+                notification.error({ message: e.message })
             }
-        }),
-    }));
+        })
 
-export default RootStore;
+
+    }))
+
+
+export default RootStore
+
+export const contests$ = [ { id: '' } ]
